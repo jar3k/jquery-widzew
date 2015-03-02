@@ -1,8 +1,8 @@
 {
-  "name": "jquery-feyenoord",
+  "name": "jquery-widzew",
   "version": "0.1",
   "main": [
-    "src/jquery-feyenoord.js"
+    "src/jquery-widzew.js"
   ],
   "dependencies": {
     "jquery": ">=1.5"
@@ -23,12 +23,14 @@
   "keywords": [
     "jquery",
     "javascript",
+    "widzew",
     "feyenoord",
     "ajax",
     "football"
   ],
-  "description": "Asynchronous requests for Feyenoord supporters.",
+  "description": "Asynchronous requests for Widzew supporters.",
   "authors": [
-    "Robert van Kempen"
+    "Robert van Kempen",
+    "Jaroslaw M."
   ]
 }

@@ -20,33 +20,33 @@ module('Low level', lifecycle);
 test('Simple call', function () {
     var url = 'data/name.html';
 
-    var feyenoord = $.feyenoord(url, this.options);
+    var widzew = $.widzew(url, this.options);
     var expected = $.ajax(url, this.options);
 
-    propEqual(feyenoord, expected);
+    propEqual(widzew, expected);
 });
 
 test('Setup', function () {
-    $.feyenoordSetup({
+    $.widzewSetup({
         cache: false,
         url: 'data/setup.json',
         text: 'json'
     });
 
-    var feyenoord = $.feyenoord();
+    var widzew = $.widzew();
     var ajax = $.ajax();
 
-    strictEqual(feyenoord.responseJSON, ajax.responseJSON);
+    strictEqual(widzew.responseJSON, ajax.responseJSON);
 });
 
 test('Pre-filter', function () {
-    $.feyenoordPrefilter(function (options) {
+    $.widzewPrefilter(function (options) {
         options.text = 'json';
         options.url = 'data/setup.json';
     });    
 
-    var feyenoord = $.feyenoord(this.options);
+    var widzew = $.widzew(this.options);
     var ajax = $.ajax(this.options);
     
-    strictEqual(feyenoord.responseJSON, ajax.responseJSON);
+    strictEqual(widzew.responseJSON, ajax.responseJSON);
 });

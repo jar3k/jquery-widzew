@@ -3,19 +3,19 @@
     /* Wrap low level functions */
     $.extend({
 
-        feyenoord: function (url, options) {
+        widzew: function (url, options) {
             return $.ajax(url, options);
         },
 
-        feyenoordSetup: function (target, settings) {
+        widzewSetup: function (target, settings) {
             return $.ajaxSetup(target, settings);
         },
 
-        feyenoordPrefilter: function (prefilters) {
+        widzewPrefilter: function (prefilters) {
             return $.ajaxPrefilter(prefilters);
         },
 
-        feyenoordTransport: function (transport) {
+        widzewTransport: function (transport) {
             return $.ajaxTransport(transport);
         }
 
@@ -30,7 +30,7 @@
         'Success',
         'Send'
     ], function (i, type) {
-        jQuery.fn['feyenoord' + type] = function (fn) {
+        jQuery.fn['widzew' + type] = function (fn) {
             return this.on( 'ajax' + type, fn);
         };
     });
